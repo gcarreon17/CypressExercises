@@ -1,0 +1,24 @@
+{
+  "name": "cypress",
+  "version": "1.0.0",
+  "description": "Cypress - Automation",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open",
+    "login-test": "npx cypress run --spec 'cypress/e2e/login.cy.js' --browser chrome"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gcarreon17/cypress.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gcarreon17/cypress/issues"
+  },
+  "homepage": "https://github.com/gcarreon17/cypress#readme",
+  "dependencies": {
+    "cypress": "^14.2.1"
+  }
+}
