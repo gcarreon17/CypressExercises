@@ -4,8 +4,9 @@
   "description": "Cypress - Automation",
   "main": "index.js",
   "scripts": {
+    "e2e": "npx cypress run --record --key 44bdf3ee-a26d-429a-9543-30d6b6acef07 'cypress/e2e/login.cy.js' --browser chrome --headedless",
     "test": "npx cypress open",
-    "login-test": "npx cypress run 'cypress/e2e/login.cy.js' --browser chrome"
+    "login-test": "npx cypress run --record --key 44bdf3ee-a26d-429a-9543-30d6b6acef07 'cypress/e2e/login.cy.js' --browser chrome --headed"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,10 @@
   },
   "homepage": "https://github.com/gcarreon17/cypress#readme",
   "dependencies": {
-    "cypress": "^14.2.1"
+    "cypress": "^14.3.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "cypress-mochawesome-reporter": "^3.8.2"
   }
 }

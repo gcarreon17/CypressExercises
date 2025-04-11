@@ -1,0 +1,12 @@
+{
+    "FirstName": "TestFirstName",
+    "LastName": "TestLastName",
+    "Address": "123 Test St",
+    "City": "TestCity",
+    "State": "TestState",   
+    "ZipCode": "12345",
+    "PhoneNumber": "123-456-7890",        
+    "SSN": "123-45-6789",
+    "Username": "TestUser",
+    "Password": "Password"
+}
