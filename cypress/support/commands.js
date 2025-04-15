@@ -89,5 +89,17 @@ Cypress.Commands.add('fillRegistrationForm', () => {
   cy.get('[colspan="2"] > .button').should('be.visible').and('contain', 'Register').click()
   cy.url().should('include', '/register.htm')
   cy.get('.title').should('contain', 'Welcome ' + Userinput.Username)
+  });
 
+Cypress.Commands.add('disableAnimations', () => {
+  cy.document().then((doc) => {
+    const style = doc.createElement('style');
+    style.innerHTML = `
+      * {
+        animation: none !important;
+        transition: none !important;
+      }
+    `;
+    doc.head.appendChild(style);
+  });
 });

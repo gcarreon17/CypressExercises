@@ -1,18 +1,17 @@
-import { generateCustomerData } from '../support/utility';
+///<reference types = "cypress"/>
+import { generateCustomerData } from '../../support/utility';
 describe('Parabank Registration', {testIsolation: false}, () => {
-    //describe('Parabank Registration', () => {
     before(() => {
-        cy.visit('https://parabank.parasoft.com')
+        cy.visit('https://parabank.parasoft.com/parabank/register.htm')
+        cy.url().should('include', '/register.htm')  
+        cy.contains('Register').click()        
     })
 
     it('Verify registration screen', () => {
         cy.contains('Register').should('be.visible').and('contain', 'Register')
-        
     })
 
-        //Register screen
     it('Verify Registration screen', () => {
-        cy.contains('Register').click()
         cy.url().should('include', '/register.htm')
         cy.get('form > :nth-child(1) > b').should('be.visible').and('contain', 'Username')
         cy.get('form > :nth-child(2) > .input').should('be.visible').and('be.empty')
