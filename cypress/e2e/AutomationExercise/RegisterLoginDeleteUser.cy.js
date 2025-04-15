@@ -10,6 +10,7 @@ describe("RegisterLoginDeleteUser", {testIsolation: false}, () => {
     cy.title().should("eq", "Automation Exercise");  
     cy.takeScreenshot('Redirection to Automation Exercise')
   })
+  
   it("Verify Sign up page", () => {
   //Verify signup page is displayed
     cy.contains("Signup / Login").click();
