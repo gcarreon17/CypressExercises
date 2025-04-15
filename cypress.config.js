@@ -3,8 +3,8 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   projectId: "cd78bc",
   experimentalStudio: true,
-  viewportWidth: 1000,
-  viewportHeight: 600,
+  //viewportWidth: 1000,
+  //viewportHeight: 600,
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     charts: true,
