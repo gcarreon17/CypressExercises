@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "aut-exec-test": "npx cypress run --spec 'cypress/e2e/AutomationExercise/RegisterLoginDeleteUser.cy.js' --browser chrome",
+    "parabank-reg-test": "npx cypress run --spec 'cypress/e2e/Parabank/ParabankRegistration.cy.js' --browser chrome",
     "test": "npx cypress open",
     "login-test": "npx cypress run --record --key 44bdf3ee-a26d-429a-9543-30d6b6acef07 'cypress/e2e/login.cy.js' --browser chrome --headed"
   },
