@@ -2,9 +2,7 @@
 import {automationExerciseData} from '../../support/utility';
 describe("RegisterLoginDeleteUser", {testIsolation: false}, () => {
   before(() => {
-    cy.clearAllCookies();
-    cy.clearAllLocalStorage();
-    cy.clearAllSessionStorage();
+    cy
     cy.visit("https://www.automationexercise.com/");
     cy.url().should("eq", "https://www.automationexercise.com/");   
     cy.title().should("eq", "Automation Exercise");  

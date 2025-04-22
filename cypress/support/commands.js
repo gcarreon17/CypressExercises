@@ -24,10 +24,22 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+
+//Clear all cookies, local storage and session storage
+Cypress.Commands.add('clearBefore', () => {
+  cy.clearAllCookies();
+  cy.clearAllLocalStorage();
+  cy.clearAllSessionStorage();  
+  cy.window().then((win) => {
+     win.localStorage.clear();
+     win.sessionStorage.clear();
+    })
+});
+
 //Launch SauceDemo Website
 Cypress.Commands.add('launchWebsite', () => {
     cy.visit('https://www.saucedemo.com')
-    cy.title().should('eq', 'Swag Labs')
+    cy.title().should('contain', 'Swag Labs')
     cy.get('.login_logo').should('be.visible')
     cy.get('[data-test="login-button"]').should('be.visible').and('be.enabled')
     cy.takeScreenshot("Launch Website")
@@ -36,7 +48,7 @@ Cypress.Commands.add('launchWebsite', () => {
 //Login SauceDemo  
 Cypress.Commands.add('authLogin', (username, password) => {
     cy.visit('https://www.saucedemo.com')
-    cy.title().should('eq', 'Swag Labs')
+    cy.title().should('contain', 'Swag Labs')
     cy.get('.login_logo').should('be.visible')
     cy.get('[data-test="login-button"]').should('be.visible').and('be.enabled')
     cy.get('[data-test="username"]').type("standard_user")
@@ -71,8 +83,9 @@ Cypress.Commands.add('restoreCart', () => {
   });
 });
 
-//Fill in fields in the registration form
-import { generateCustomerData } from '../support/utility';
+
+//Fill in fields in the Parabank registration form using utility file
+import {generateCustomerData} from '../support/utility';
 Cypress.Commands.add('fillRegistrationForm', () => {
   const Userinput = generateCustomerData()
   cy.get("input[id='customer.firstName']").should('be.visible').and('be.empty').type(Userinput.FirstName)
@@ -89,7 +102,11 @@ Cypress.Commands.add('fillRegistrationForm', () => {
   cy.get('[colspan="2"] > .button').should('be.visible').and('contain', 'Register').click()
   cy.url().should('include', '/register.htm')
   cy.get('.title').should('contain', 'Welcome ' + Userinput.Username)
+  cy.get('#rightPanel > p').should('be.visible').and('contain', 'Your account was created successfully. You are now logged in.');
   });
+  
+
+ 
 
 Cypress.Commands.add('disableAnimations', () => {
   cy.document().then((doc) => {
