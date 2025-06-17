@@ -48,7 +48,6 @@ git clone https://github.com/gcarreon17/cypress.git
 - The test suite can be executed both in **headless** and **headed** modes.
 
 ### Headless Mode 🧑‍💻 (Without Browser UI)
-
 1. Login Test (Headless)
 - To run the login test in headless mode:
 
@@ -56,16 +55,14 @@ git clone https://github.com/gcarreon17/cypress.git
 npm run "aut_exercise_all": ""npx cypress run --spec 'cypress/e2e/AutomationExercise/*.cy.js"
 ```
 
+### Headed Mode 🖥️ (With Browser UI)
+- In headed mode, the browser runs with a visible UI. This mode is useful for debugging and visual verification of test actions.
 2. Login Test (Headed)
 - To run the login test in headed mode:
 
 ```bash
 npm run "auto-exec-test2": ""npx cypress run --spec 'cypress/e2e/AutomationExercise/AddToCart.cy.js' --browser chrome --headed"
 ```
-
-### Headed Mode 🖥️ (With Browser UI)
-- In headed mode, the browser runs with a visible UI. This mode is useful for debugging and visual verification of test actions.
-
 
 ## Features ✨
 
