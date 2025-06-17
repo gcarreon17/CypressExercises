@@ -67,8 +67,8 @@ npm run "auto-exec-test2": ""npx cypress run --spec 'cypress/e2e/AutomationExerc
 
 ## Features ✨
 
-- **Login Test**: Automates the login functionality using valid and invalid credentials on the Automation Exercise website.
-- **List of Products**: Automates checking of Product listing if displayed correctly and completely.
+- **Login Test**: This automates the login functionality using valid and invalid credentials on the Automation Exercise website.
+- **List of Products**: This automates checking of Product listing if displayed correctly and completely.
 - **Remove Product**: This automates removal of a product in the cart.
 - **Add to Cart**: This automates adding to cart of product/s that will be checked out.
 - **Registration of User**: This automates user registration to login.
