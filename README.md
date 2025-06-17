@@ -53,14 +53,14 @@ git clone https://github.com/gcarreon17/cypress.git
 - To run the login test in headless mode:
 
 ```bash
-npm run "login-test": "npx cypress run --spec 'cypress/e2e/login.cy.js' --browser chrome"
+npm run "aut_exercise_all": ""npx cypress run --spec 'cypress/e2e/AutomationExercise/*.cy.js"
 ```
 
 2. Login Test (Headed)
 - To run the login test in headed mode:
 
 ```bash
-npm run "test": "npx cypress open
+npm run "auto-exec-test2": ""npx cypress run --spec 'cypress/e2e/AutomationExercise/AddToCart.cy.js' --browser chrome --headed"
 ```
 
 ### Headed Mode 🖥️ (With Browser UI)
