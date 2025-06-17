@@ -14,5 +14,11 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
-import 'cypress-mochawesome-reporter/register'
+import './commands/automationExerciseCommands';
+import './commands/parabankCommands';
+import './commands/sauceDemoCommands';
+import 'cypress-mochawesome-reporter/register';
+import "cypress-downloadfile/lib/downloadFileCommand";
+require('cypress-xpath');
+import 'cypress-plugin-api';
+import 'cypress-wait-until';

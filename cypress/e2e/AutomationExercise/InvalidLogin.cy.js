@@ -1,6 +1,6 @@
-  /// <reference types="cypress" />
+/// <reference types="cypress" />
 
-  describe("Invalid Login", () => {
+  describe("Invalid Login", {testIsolation: false}, () => {
     it("Verify Invalid Login", () => {
       //Navigate to URL
       cy.visit("https://www.automationexercise.com");

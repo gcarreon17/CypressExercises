@@ -1,5 +1,6 @@
 ///<reference types = "cypress"/>
-describe("Scroll With Arrow Keys", () => {
+
+describe("Scroll With Arrow Keys", {testIsolation: false}, () => {
   it("Scroll Down with Arrow Keys", () => {
     //Launch website
     cy.visit("https://www.automationexercise.com/");

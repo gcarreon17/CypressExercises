@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Test Case Page", () => {
+describe("Test Case Page", {testIsolation: false}, () => {
   it("Verify Test Case Page", () => {
     //Navigate to URL
     cy.visit("https://www.automationexercise.com");

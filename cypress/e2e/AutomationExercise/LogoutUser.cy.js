@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-describe("Logout User", () => {
+describe("Logout User", {testIsolation: false}, () => {
   it("Verify Successful User Logout", () => {
     //Navigate to URL
     cy.visit("https://www.automationexercise.com");

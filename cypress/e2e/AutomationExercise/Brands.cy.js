@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/>
 
-describe("Brands", () => {
+describe("Brands", {testIsolation: false}, () => {
   it("Verify Brands", () => {
     cy.visit("https://www.automationexercise.com");
     cy.wait(5000);

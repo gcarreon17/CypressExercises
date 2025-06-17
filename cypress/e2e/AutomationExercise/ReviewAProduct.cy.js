@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/>
 
-describe("Review a Product", () => {
+describe("Review a Product", {testIsolation: false}, () => {
   it("Verify Review a Product", () => {
     cy.visit("https://www.automationexercise.com");
     cy.wait(5000);
@@ -54,8 +54,7 @@ describe("Review a Product", () => {
       .type("testing");
 
     cy.get("#button-review").should("be.visible").and("be.enabled").click();
-
-   cy.get('span').invoke('text').should('include', 'Thank you for your review.');
+    cy.get('span').invoke('text').should('include', 'Thank you for your review.');
 
   });
 });

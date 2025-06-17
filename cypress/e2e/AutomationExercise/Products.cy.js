@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/>
 
-describe("Products Page", () => {
+describe("Products Page", {testIsolation: false}, () => {
   it("Products", () => {
     cy.visit("https://www.automationexercise.com");
     cy.wait(5000);
@@ -21,7 +21,8 @@ describe("Products Page", () => {
       .should("eq", "All Products");
 
     //Verify correct number of products displayed
-    cy.get("body > section:nth-child(3) > div:nth-child(1)")
+    //cy.get("body > section:nth-child(3) > div:nth-child(1)")
+    cy.get('.features_items')
       .should("be.visible")
       .find("img")
       .should("have.length", 34);

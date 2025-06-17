@@ -1,13 +1,15 @@
-name: Cypress Tests
+name: Scheduled Workflow - Cypress Tests
 
 on:
+  schedule:
+    - cron: '0 16 * * 3'  # Every Wednesday 16:00 UTC -> Thursday 00:00 PHT
   push:
     branches:
       [main, staging]
   pull_request:
     branches:
       [main, staging]
-  workflow_dispatch:
+  workflow_dispatch: # Manual Trigger on GitHub
 
 jobs:
   test:

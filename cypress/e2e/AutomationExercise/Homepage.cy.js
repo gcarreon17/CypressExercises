@@ -1,6 +1,6 @@
 ///<reference types="cypress" />
 
-describe("Homepage", () => {
+describe("Homepage", {testIsolation: false}, () => {
   it("Verify Homepage UI is correct", () => {
     //Launch website
     cy.visit("https://www.automationexercise.com/");

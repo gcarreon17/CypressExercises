@@ -1,6 +1,6 @@
 ///<reference types="cypress" />
 
-describe("Test Case1", () => {
+describe("Test Case1", {testIsolation: false}, () => {
   it("Test script1 - Verify Title Positive", () => {
     cy.visit("https://opensource-demo.orangehrmlive.com/");
     cy.title().should("eq", "OrangeHRM");
@@ -8,6 +8,6 @@ describe("Test Case1", () => {
 
   it("Test script2 - Verify Title Negative", () => {
     cy.visit("https://opensource-demo.orangehrmlive.com/");
-    cy.title().should("eq", "OrangeHRM1"); // Ensuring the title is not 'OrangeHRM1'
+    cy.title().should("eq", "OrangeHRM1"); 
   });
 });

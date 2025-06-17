@@ -1,6 +1,6 @@
 ///<reference types = "cypress"/>
 
-describe("View Category", () => {
+describe("View Category", {testIsolation: false}, () => {
   it("View Category", () => {
     //Launch website
     cy.visit("https://www.automationexercise.com/");

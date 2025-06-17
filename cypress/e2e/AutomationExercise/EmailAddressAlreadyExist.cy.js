@@ -1,6 +1,6 @@
 ///<reference types="cypress" />
 
-describe("Register an existing email address", () => {
+describe("Register an existing email address", {testIsolation: false}, () => {
   it("Verify Unsuccessful Registration of an existing user", () => {
     //Navigate to URL
     cy.visit("http://www.automationexercise.com");

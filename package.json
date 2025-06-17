@@ -4,10 +4,23 @@
   "description": "Cypress - Automation",
   "main": "index.js",
   "scripts": {
-    "aut-exec-test": "npx cypress run --spec 'cypress/e2e/AutomationExercise/RegisterLoginDeleteUser.cy.js' --browser chrome",
-    "parabank-reg-test": "npx cypress run --spec 'cypress/e2e/Parabank/ParabankRegistration.cy.js' --browser chrome",
-    "test": "npx cypress open",
-    "login-test": "npx cypress run --record --key 44bdf3ee-a26d-429a-9543-30d6b6acef07 'cypress/e2e/login.cy.js' --browser chrome --headed"
+    "cy:run:all": "npx cypress run --spec 'cypress/e2e/**/*.cy.js'",
+    "cy:run:all:headed": "npx cypress run --headed --spec 'cypress/e2e/**/*.cy.js'",
+    "cy:run:all:headedless": "npx cypress run --headed --spec 'cypress/e2e/**/*.cy.js'",
+    "cy:run:all:headed:chrome": "npx cypress run --headed --browser chrome --spec 'cypress/e2e/**/*.cy.js'",
+    "cy:run:all:headed:electron": "npx cypress run --headed --browser electron --spec 'cypress/e2e/**/*.cy.js'",
+    "api_all": "npx cypress run --spec 'cypress/e2e/API/*.cy.js'",
+    "aut_exercise_all": "npx cypress run --spec 'cypress/e2e/automationExercise/*.cy.js'",
+    "call-delete-api": "npx cypress run --spec 'cypress/e2e/API/APIDeleteCall.cy.js'",
+    "call-get-api": "npx cypress run --spec 'cypress/e2e/API/APIGetCall.cy.js'",
+    "call-post-api": "npx cypress run --spec 'cypress/e2e/API/APIPostCall.cy.js'",
+    "call-put-api": "npx cypress run --spec 'cypress/e2e/API/APIPutCall.cy.js'",
+    "call-petstore-orders-api": "npx cypress run --spec 'cypress/e2e/API/SwaggerPetstoreOrdersApi.cy.js'",
+    "call-petstore-users-api": "npx cypress run --spec 'cypress/e2e/API/SwaggerPetstoreUserApi.cy.js'",
+    "auto-exec-test1": "npx cypress run --spec 'cypress/e2e/AutomationExercise/AddtoCart_Register._Delete.cy.js'",
+    "auto-exec-test2": "npx cypress run --spec 'cypress/e2e/AutomationExercise/AddToCart.cy.js' --browser chrome --headed",
+    "login-test": "npx cypress run --record --key 44bdf3ee-a26d-429a-9543-30d6b6acef07 'cypress/e2e/login.cy.js' --browser chrome --headed",
+    "coverage-report": "nyc report --reporter=html"
   },
   "repository": {
     "type": "git",
@@ -21,11 +34,23 @@
   },
   "homepage": "https://github.com/gcarreon17/cypress#readme",
   "dependencies": {
-    "cypress": "^14.3.0",
-    "cypress-plugin-api": "^2.11.2"
+    "dotenv": "^16.5.0"
   },
   "devDependencies": {
+    "@cypress/code-coverage": "^3.14.0",
+    "@cypress/webpack-preprocessor": "^6.0.4",
     "@faker-js/faker": "^9.6.0",
-    "cypress-mochawesome-reporter": "^3.8.2"
+    "babel-plugin-istanbul": "^7.0.0",
+    "cypress": "^14.4.0",
+    "cypress-downloadfile": "^1.2.4",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-plugin-api": "^2.11.2",
+    "cypress-wait-until": "^3.0.2",
+    "cypress-xpath": "^2.0.1",
+    "istanbul-lib-coverage": "^3.2.2",
+    "nock": "^14.0.4",
+    "nyc": "^17.1.0",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
   }
 }
