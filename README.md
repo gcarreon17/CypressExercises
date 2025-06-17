@@ -48,6 +48,7 @@ git clone https://github.com/gcarreon17/cypress.git
 - The test suite can be executed both in **headless** and **headed** modes.
 
 ### Headless Mode 🧑‍💻 (Without Browser UI)
+- In headless mode means running a browser without a visible UI.
 1. Login Test (Headless)
 - To run the login test in headless mode:
 
