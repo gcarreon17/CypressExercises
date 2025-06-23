@@ -1,6 +1,6 @@
 # AutomationExercise
 
-This is to automate test execution for **Automation Exercise** using **Cypress** and **Mocha** framework. This includes ALL features that can be executed either  **headless** and **headed** modes. 🌐
+This is to automate test execution for **Cypress Exercises** using **Cypress** and **Mocha** framework. This includes ALL features that can be executed either  **headless** and **headed** modes. 🌐
 
 ## Table of Contents 📚
 
@@ -66,6 +66,7 @@ npm run "auto-exec-test2": ""npx cypress run --spec 'cypress/e2e/AutomationExerc
 ```
 
 ## Features ✨
+## Automation Exericises
 
 - **Login Test**: This automates the login functionality using valid and invalid credentials on the Automation Exercise website.
 - **List of Products**: This automates checking of Product listing if displayed correctly and completely.
