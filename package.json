@@ -19,6 +19,7 @@
     "call-petstore-users-api": "npx cypress run --spec 'cypress/e2e/API/SwaggerPetstoreUserApi.cy.js'",
     "auto-exec-test1": "npx cypress run --spec 'cypress/e2e/AutomationExercise/AddtoCart_Register._Delete.cy.js'",
     "auto-exec-test2": "npx cypress run --spec 'cypress/e2e/AutomationExercise/AddToCart.cy.js' --browser chrome --headed",
+    "parabank-reg-test": "npx cypress run --spec cypress/e2e/parabank/registration.cy.js",
     "login-test": "npx cypress run --record --key 44bdf3ee-a26d-429a-9543-30d6b6acef07 'cypress/e2e/login.cy.js' --browser chrome --headed",
     "coverage-report": "nyc report --reporter=html"
   },

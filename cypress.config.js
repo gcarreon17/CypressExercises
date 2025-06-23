@@ -33,8 +33,8 @@ module.exports = defineConfig({
     defaultCommandTimeout: 10000,
     retries: 3, 
 
-    //videoCompression: false,      // 🗜 Compress the video (0–51, false = no compression)
-    //trashAssetsBeforeRuns: false, // 🗑 Delete old videos/screenshots before a new run
+    videoCompression: false,      // 🗜 Compress the video (0–51, false = no compression)
+    trashAssetsBeforeRuns: false, // 🗑 Delete old videos/screenshots before a new run
 
 
     reporter: "cypress-mochawesome-reporter",
