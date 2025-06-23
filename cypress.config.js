@@ -6,7 +6,11 @@ module.exports = defineConfig({
   e2e: {
     // viewportWidth: 1920,
     // viewportHeight: 1080,
-    baseUrl: "https://petstore.swagger.io/v2" || Cypress.env(API_BASE_URL),
+    // baseUrl: "https://petstore.swagger.io/v2" || Cypress.env('API_BASE_URL'),
+    baseUrl: process.env.API_BASE_URL,
+    env: {
+      apiKey: process.env.API_KEY
+    },
     setupNodeEvents(on, config) {
       on("before:run", async (details) => {
         console.log("override before:run");
@@ -27,7 +31,7 @@ module.exports = defineConfig({
     video: true,
     videosFolder: 'cypress/videos',
     defaultCommandTimeout: 10000,
-    retries: 3, // ✅ Correctly placed
+    retries: 3, 
 
     //videoCompression: false,      // 🗜 Compress the video (0–51, false = no compression)
     //trashAssetsBeforeRuns: false, // 🗑 Delete old videos/screenshots before a new run
